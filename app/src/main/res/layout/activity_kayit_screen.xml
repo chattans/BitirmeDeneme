@@ -1,30 +1,267 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/bgColor"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewKayitOl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+
+            android:text="Kayit Ol"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editTextAdSoyad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress2"
-            android:layout_width="match_parent"
+            android:id="@+id/editTextAdSoyad"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
             android:background="@drawable/tv_border"
-            android:layout_height="wrap_content"
+            android:elevation="8dp"
             android:ems="10"
-            android:inputType="textEmailAddress" />
+            android:hint="Ad Soyad"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewKayitOl" />
+
+        <EditText
+            android:id="@+id/editTextTextEmail"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/tv_border"
+            android:elevation="8dp"
+            android:ems="10"
+            android:hint="Eposta"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextAdSoyad" />
+
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/tv_border"
+            android:elevation="8dp"
+            android:ems="10"
+            android:hint="Sifre"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTarih"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmail" />
+
+        <EditText
+            android:id="@+id/editTextTarih"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/tv_border"
+            android:elevation="8dp"
+            android:ems="10"
+            android:hint="Dogum Tarihi"
+            android:inputType="date"
+            android:paddingLeft="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTarih">
+
+            <EditText
+                android:id="@+id/editTextIl"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/tv_border"
+                android:elevation="8dp"
+                android:ems="10"
+                android:hint="Il"
+                android:inputType="text"
+                android:paddingLeft="20dp" />
+
+            <EditText
+                android:id="@+id/editTextIlce"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/tv_border"
+                android:elevation="8dp"
+                android:ems="10"
+                android:hint="Ilce
+"
+                android:inputType="text"
+                android:paddingLeft="20dp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/tv_border"
+            android:elevation="8dp"
+            android:ems="10"
+            android:hint="Telefon no"
+            android:inputType="phone"
+            android:paddingLeft="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextAciklama"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
+        <EditText
+            android:id="@+id/editTextAciklama"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/tv_border"
+            android:elevation="8dp"
+            android:ems="10"
+            android:hint="Profil Aciklamasi"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:paddingBottom="90dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+
+        <TextView
+            android:id="@+id/textViewCinsiyet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:text="Cinsiyet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextAciklama" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupCinsiyet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewTercih"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCinsiyet">
+
+            <RadioButton
+                android:id="@+id/radioButtonErkek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Erkek" />
+
+            <RadioButton
+                android:id="@+id/radioButtonKadin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Kadin" />
+        </RadioGroup>
 
         <Button
-            android:id="@+id/btnSignUp"
-            android:layout_width="match_parent"
+            android:id="@+id/buttonKayit"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1000dp"
-            android:text="Kayıt Ol" />
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/btn_design"
+            android:elevation="8dp"
+            android:text="Kayit Ol"
+            android:textColor="@color/bgColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchBakici" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/textViewTercih"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:text="Tercih : "
+            app:layout_constraintBottom_toTopOf="@+id/switchHS"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupCinsiyet" />
 
+        <Switch
+            android:id="@+id/switchHS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:minHeight="48dp"
+            android:text="Hayvan sahibi "
+            app:layout_constraintBottom_toTopOf="@+id/switchBakici"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTercih" />
+
+        <Switch
+            android:id="@+id/switchBakici"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:minHeight="48dp"
+            android:text="Bakici               "
+            app:layout_constraintBottom_toTopOf="@+id/buttonKayit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchHS" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         buttonGirisYap.setOnClickListener(){
 
-            val intent = Intent(this, girisDeneme::class.java)
+            val intent = Intent(this, AnaEkran::class.java)
 
             startActivity(intent)
 
